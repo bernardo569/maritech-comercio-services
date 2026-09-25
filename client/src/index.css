@@ -4,11 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --maritech-blue: #0057c8;
-  --maritech-blue-deep: #003b93;
-  --maritech-cyan: #08b9df;
-  --maritech-green: #16af28;
-  --maritech-green-dark: #078520;
+  --maritech-blue: #078a42;
+  --maritech-blue-deep: #04552f;
+  --maritech-cyan: #0abf83;
+  --maritech-green: #16b84a;
+  --maritech-green-dark: #087334;
   --maritech-yellow: #f3c51b;
   --ink: #102649;
   --paper: #f6fbff;
@@ -49,7 +49,7 @@ button { border: 0; }
 .site-header { position: absolute; z-index: 10; top: 0; width: 100%; color: white; }
 .topbar { height: 98px; display: flex; align-items: center; gap: 28px; }
 .brand-mark { display: block; width: 178px; flex: 0 0 auto; }
-.brand-mark img { display: block; width: 100%; height: auto; mix-blend-mode: screen; filter: saturate(1.1) contrast(1.05); }
+.brand-mark img { display: block; width: 100%; height: auto; filter: saturate(1.1) contrast(1.05); }
 .header-meta { margin-left: auto; display: flex; gap: 22px; color: rgba(255,255,255,.75); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
 .header-meta span { display: flex; align-items: center; gap: 7px; }
 .main-nav { display: flex; align-items: center; gap: 26px; margin-left: 22px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
@@ -60,7 +60,8 @@ button { border: 0; }
 .language-switcher button.active { color: var(--maritech-yellow); }
 .mobile-menu { display: none; margin-left: auto; color: white; background: transparent; cursor: pointer; }
 
-.hero-section { position: relative; color: white; min-height: 760px; padding-top: 155px; background-image: linear-gradient(90deg, rgba(0,42,108,.94) 0%, rgba(0,73,163,.83) 48%, rgba(0,83,145,.58) 100%), url("/manus-storage/offshore-platform_53f43a44.jpg"); background-size: cover; background-position: center; }
+.hero-section { position: relative; isolation: isolate; overflow: hidden; color: white; min-height: 760px; padding-top: 155px; background: linear-gradient(120deg, #04552f 0%, #078a42 57%, #0b9b62 100%); }
+.hero-section:before { content: ""; position: absolute; z-index: -1; inset: -4%; background-image: linear-gradient(90deg, rgba(4,85,47,.78) 0%, rgba(7,138,66,.54) 58%, rgba(11,155,98,.28) 100%), url("/manus-storage/offshore-platform_53f43a44.jpg"); background-size: cover; background-position: center; opacity: .82; animation: heroBackgroundDrift 18s ease-in-out infinite alternate; }
 .hero-section:after { content: ""; position: absolute; inset: auto 0 0; height: 170px; opacity: .13; background-image: linear-gradient(150deg, transparent 62%, white 62%, white 62.5%, transparent 62.5%), linear-gradient(155deg, transparent 73%, var(--maritech-green) 73%, var(--maritech-green) 74%, transparent 74%); pointer-events: none; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.03fr; gap: 74px; align-items: center; min-height: 530px; }
 .hero-copy { max-width: 595px; }
@@ -175,6 +176,10 @@ form input:focus, form textarea:focus { border-color: var(--maritech-cyan); box-
 @keyframes heroImageDrift {
   0% { transform: scale(1.03) translate3d(-1%, -1%, 0); }
   100% { transform: scale(1.1) translate3d(1.5%, 1%, 0); }
+}
+@keyframes heroBackgroundDrift {
+  0% { transform: scale(1.03) translate3d(-1%, 0, 0); }
+  100% { transform: scale(1.1) translate3d(1.5%, -1%, 0); }
 }
 @keyframes photoFloat {
   0% { transform: scale(1.03) translate3d(-1%, 0, 0); }
