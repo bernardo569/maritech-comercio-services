@@ -26,8 +26,9 @@ type Language = "pt" | "en";
 
 const assets = {
   logo: "/manus-storage/maritech-logo_eba8f684.jpg",
-  tank: "/manus-storage/tank-cleaning_bbaf5d26.jpg",
-  radiation: "/manus-storage/radiation-protection_4be1a6d4.jpg",
+  platform: "/manus-storage/platform-worker_46611f4b.jpg",
+  tank: "/manus-storage/industrial-platform-worker_9fd15c3d.jpg",
+  radiation: "/manus-storage/radiation-team_ecbb81fb.webp",
   agriculture: "/manus-storage/agriculture_3e02657f.jpg",
 };
 
@@ -239,7 +240,7 @@ export default function Home() {
             </div>
             <div className="hero-visual">
               <div className="hero-image-wrap">
-                <img src={assets.radiation} alt={language === "pt" ? "Profissional em ambiente de proteção radiológica" : "Professional in a radiation protection environment"} />
+                <img src={assets.radiation} alt={language === "pt" ? "Equipa africana de proteção radiológica" : "African radiation protection team"} />
                 <div className="hero-image-overlay" />
               </div>
               <div className="hero-logo-card">

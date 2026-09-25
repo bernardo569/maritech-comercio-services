@@ -60,7 +60,7 @@ button { border: 0; }
 .language-switcher button.active { color: var(--maritech-yellow); }
 .mobile-menu { display: none; margin-left: auto; color: white; background: transparent; cursor: pointer; }
 
-.hero-section { position: relative; color: white; min-height: 760px; padding-top: 155px; background: radial-gradient(circle at 88% 16%, rgba(8,185,223,.22), transparent 28%), linear-gradient(120deg, #003b93 0%, #0057c8 62%, #0079bc 100%); }
+.hero-section { position: relative; color: white; min-height: 760px; padding-top: 155px; background-image: linear-gradient(90deg, rgba(0,42,108,.94) 0%, rgba(0,73,163,.83) 48%, rgba(0,83,145,.58) 100%), url("/manus-storage/offshore-platform_53f43a44.jpg"); background-size: cover; background-position: center; }
 .hero-section:after { content: ""; position: absolute; inset: auto 0 0; height: 170px; opacity: .13; background-image: linear-gradient(150deg, transparent 62%, white 62%, white 62.5%, transparent 62.5%), linear-gradient(155deg, transparent 73%, var(--maritech-green) 73%, var(--maritech-green) 74%, transparent 74%); pointer-events: none; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.03fr; gap: 74px; align-items: center; min-height: 530px; }
 .hero-copy { max-width: 595px; }
