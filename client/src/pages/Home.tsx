@@ -62,22 +62,29 @@ const content = {
         points: ["Triagem de perfis", "Equipas por projeto", "Resposta operacional"],
       },
       {
-        icon: Radiation,
+        icon: Leaf,
         number: "02",
+        title: "Exportação de pimenta chili",
+        text: "Produção, preparação e exportação de pimenta chili para mercados no exterior.",
+        points: ["Seleção do produto", "Preparação para exportação", "Mercados internacionais"],
+      },
+      {
+        icon: Radiation,
+        number: "03",
         title: "Radioproteção",
         text: "Profissionais e equipamentos para o manejo responsável de materiais radioativos de ocorrência natural.",
-        points: ["Peritos e RPO", "Técnicos especializados", "Dosimetria e deteção"],
+        points: ["Peritos e HSE Supervisor RPO", "Oficiais e técnicos de proteção", "Medidores, dosimeter e detectores"],
       },
       {
         icon: Factory,
-        number: "03",
+        number: "04",
         title: "Limpeza industrial",
         text: "Limpeza técnica de tanques, filtros, depósitos, COT, drenos e áreas de operação em terra ou no mar.",
-        points: ["Tanques e exchangers", "Depósitos de barcos", "Desentupimento de drenos"],
+        points: ["Tanques e filtros exchanger", "Depósitos de combustível em barcos", "COT, drenos e desentupimento"],
       },
       {
         icon: Sprout,
-        number: "04",
+        number: "05",
         title: "Agricultura & produção",
         text: "Apoio a projetos de agricultura, aviário, pecuária, apicultura e avicultura com visão local.",
         points: ["Produção sustentável", "Apoio a operações", "Desenvolvimento regional"],
@@ -139,22 +146,29 @@ const content = {
         points: ["Profile screening", "Project-based teams", "Operational response"],
       },
       {
-        icon: Radiation,
+        icon: Leaf,
         number: "02",
+        title: "Chili pepper export",
+        text: "Production, preparation and export of chili peppers to international markets.",
+        points: ["Product selection", "Export preparation", "International markets"],
+      },
+      {
+        icon: Radiation,
+        number: "03",
         title: "Radiation protection",
         text: "People and equipment for the responsible handling of naturally occurring radioactive materials.",
-        points: ["Experts and RPOs", "Specialist technicians", "Dosimetry and detection"],
+        points: ["Experts and HSE Supervisor RPO", "Protection officers and technicians", "Meters, dosimeter and gas detection"],
       },
       {
         icon: Factory,
-        number: "03",
+        number: "04",
         title: "Industrial cleaning",
         text: "Technical cleaning of tanks, filters, deposits, COT, drains and operational areas onshore or offshore.",
-        points: ["Tanks and exchangers", "Vessel fuel deposits", "Drain unclogging"],
+        points: ["Tanks and exchanger filters", "Vessel fuel deposits", "COT, drains and unclogging"],
       },
       {
         icon: Sprout,
-        number: "04",
+        number: "05",
         title: "Agriculture & production",
         text: "Support for agriculture, poultry, livestock, beekeeping and aviculture projects with a local perspective.",
         points: ["Sustainable production", "Operational support", "Regional development"],
@@ -243,6 +257,15 @@ export default function Home() {
           <div className="hero-bottom-line container"><span className="line" /><span>Serviços que protegem o ritmo do seu negócio</span></div>
         </section>
 
+        <section className="image-strip-section" aria-label={language === "pt" ? "Galeria de operações" : "Operations gallery"}>
+          <div className="image-strip container">
+            <figure><img src={assets.agriculture} alt={language === "pt" ? "Limpeza de embarcação" : "Vessel cleaning"} /><figcaption>{language === "pt" ? "Embarcações" : "Vessels"}</figcaption></figure>
+            <figure><img src={assets.tank} alt={language === "pt" ? "Limpeza de tanque industrial" : "Industrial tank cleaning"} /><figcaption>{language === "pt" ? "Tanques" : "Tanks"}</figcaption></figure>
+            <figure><img src={assets.radiation} alt={language === "pt" ? "Supervisor de radioproteção" : "Radiation protection supervisor"} /><figcaption>{language === "pt" ? "Radioproteção" : "Radiation protection"}</figcaption></figure>
+            <figure><img src={assets.platform} alt={language === "pt" ? "Equipa de limpeza industrial" : "Industrial cleaning team"} /><figcaption>{language === "pt" ? "Limpeza industrial" : "Industrial cleaning"}</figcaption></figure>
+          </div>
+        </section>
+
         <section id="servicos" className="services-section section-pad">
           <div className="container">
             <div className="section-heading split-heading">
@@ -252,27 +275,20 @@ export default function Home() {
               </div>
               <p>{t.servicesIntro}</p>
             </div>
-            <div className="services-layout">
-              <div className="services-photo-card">
-                <img src={assets.tank} alt={language === "pt" ? "Limpeza técnica de tanque industrial" : "Technical industrial tank cleaning"} />
-                <div className="photo-caption"><span>03</span><strong>{language === "pt" ? "Presença no terreno" : "Field presence"}</strong></div>
-              </div>
-              <div className="services-list">
-                {t.serviceCards.map((service, index) => {
-                  const Icon = service.icon;
-                  return (
-                    <article className={`service-row ${index === 0 ? "is-highlighted" : ""}`} key={service.number}>
-                      <div className="service-number">{service.number}</div>
-                      <div className="service-icon"><Icon size={22} strokeWidth={1.7} /></div>
-                      <div className="service-body">
-                        <h3>{service.title}</h3>
-                        <p>{service.text}</p>
-                        <div className="service-points">{service.points.map(point => <span key={point}><CheckCircle2 size={14} />{point}</span>)}</div>
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
+            <div className="services-row">
+              {t.serviceCards.map((service) => {
+                const Icon = service.icon;
+                return (
+                  <article className="service-card" key={service.number}>
+                    <div className="service-card-top"><span className="service-number">{service.number}</span><div className="service-icon"><Icon size={22} strokeWidth={1.7} /></div></div>
+                    <div className="service-body">
+                      <h3>{service.title}</h3>
+                      <p>{service.text}</p>
+                      <div className="service-points">{service.points.map(point => <span key={point}><CheckCircle2 size={14} />{point}</span>)}</div>
+                    </div>
+                  </article>
+                );
+              })}
             </div>
             <a className="text-link" href="#contactos">{t.serviceCta}</a>
           </div>
