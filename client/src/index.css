@@ -63,7 +63,7 @@ button { border: 0; }
 .hero-section { position: relative; isolation: isolate; overflow: hidden; color: white; min-height: 760px; padding-top: 155px; background: linear-gradient(120deg, #04552f 0%, #078a42 57%, #0b9b62 100%); }
 .hero-section:before { content: ""; position: absolute; z-index: -1; inset: -4%; background-image: linear-gradient(90deg, rgba(4,85,47,.78) 0%, rgba(7,138,66,.54) 58%, rgba(11,155,98,.28) 100%), url("/manus-storage/offshore-platform_53f43a44.jpg"); background-size: cover; background-position: center; opacity: .82; animation: heroBackgroundDrift 18s ease-in-out infinite alternate; }
 .hero-section:after { content: ""; position: absolute; inset: auto 0 0; height: 170px; opacity: .13; background-image: linear-gradient(150deg, transparent 62%, white 62%, white 62.5%, transparent 62.5%), linear-gradient(155deg, transparent 73%, var(--maritech-green) 73%, var(--maritech-green) 74%, transparent 74%); pointer-events: none; }
-.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1.03fr; gap: 74px; align-items: center; min-height: 530px; }
+.hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; gap: 74px; align-items: center; min-height: 530px; }
 .hero-copy { max-width: 595px; }
 .eyebrow { display: flex; align-items: center; gap: 11px; color: var(--maritech-blue); font-size: 11px; font-weight: 900; letter-spacing: .15em; text-transform: uppercase; }
 .eyebrow-light { color: var(--maritech-yellow); }

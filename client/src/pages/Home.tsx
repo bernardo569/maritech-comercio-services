@@ -238,14 +238,6 @@ export default function Home() {
               </div>
               <div className="hero-footnote"><span className="status-dot" />{t.availability}</div>
             </div>
-            <div className="hero-visual">
-              <div className="hero-image-wrap">
-                <img src={assets.radiation} alt={language === "pt" ? "Equipa africana de proteção radiológica" : "African radiation protection team"} />
-                <div className="hero-image-overlay" />
-              </div>
-              <div className="hero-note"><Radiation size={17} /><span>{t.heroTag}</span></div>
-              <div className="hero-index">01 <span>/</span> 04</div>
-            </div>
           </div>
           <div className="hero-bottom-line container"><span>MT</span><span className="line" /><span>Serviços que protegem o ritmo do seu negócio</span></div>
         </section>
