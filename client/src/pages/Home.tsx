@@ -1,9 +1,7 @@
 import { useState } from "react";
 import {
   Activity,
-  ArrowUpRight,
   CheckCircle2,
-  ChevronRight,
   Clock3,
   Factory,
   Gauge,
@@ -25,7 +23,7 @@ import {
 type Language = "pt" | "en";
 
 const assets = {
-  logo: "/manus-storage/maritech-logo-transparent_e3384c32.png",
+  logo: "/manus-storage/maritech-mt-mark_7693e8fb.png",
   platform: "/manus-storage/platform-worker_46611f4b.jpg",
   tank: "/manus-storage/industrial-platform-worker_9fd15c3d.jpg",
   radiation: "/manus-storage/radiation-team_ecbb81fb.webp",
@@ -233,13 +231,13 @@ export default function Home() {
               <h1>{t.title}</h1>
               <p className="hero-intro">{t.intro}</p>
               <div className="hero-actions">
-                <a className="button button-primary" href="#contactos">{t.primary} <ArrowUpRight size={17} /></a>
-                <a className="button button-ghost" href="#servicos">{t.secondary} <ChevronRight size={16} /></a>
+                <a className="button button-primary" href="#contactos">{t.primary}</a>
+                <a className="button button-ghost" href="#servicos">{t.secondary}</a>
               </div>
               <div className="hero-footnote"><span className="status-dot" />{t.availability}</div>
             </div>
           </div>
-          <div className="hero-bottom-line container"><span>MT</span><span className="line" /><span>Serviços que protegem o ritmo do seu negócio</span></div>
+          <div className="hero-bottom-line container"><span className="line" /><span>Serviços que protegem o ritmo do seu negócio</span></div>
         </section>
 
         <section id="servicos" className="services-section section-pad">
@@ -268,13 +266,12 @@ export default function Home() {
                         <p>{service.text}</p>
                         <div className="service-points">{service.points.map(point => <span key={point}><CheckCircle2 size={14} />{point}</span>)}</div>
                       </div>
-                      <ChevronRight className="service-arrow" size={20} />
                     </article>
                   );
                 })}
               </div>
             </div>
-            <a className="text-link" href="#contactos">{t.serviceCta} <ArrowUpRight size={17} /></a>
+            <a className="text-link" href="#contactos">{t.serviceCta}</a>
           </div>
         </section>
 
@@ -333,7 +330,7 @@ export default function Home() {
                 <label>{t.formName}<input name="name" placeholder={t.formName} required /></label>
                 <label>{t.formEmail}<input name="email" type="email" placeholder={t.formEmail} required /></label>
                 <label>{t.formMessage}<textarea name="message" placeholder={t.formMessage} rows={4} required /></label>
-                <button className="button button-yellow" type="submit">{t.formSend} <ArrowUpRight size={17} /></button>
+                <button className="button button-yellow" type="submit">{t.formSend}</button>
               </form>
             </div>
           </div>
@@ -342,9 +339,8 @@ export default function Home() {
 
       <footer className="site-footer">
         <div className="container footer-grid">
-          <a className="brand-mark footer-brand" href="#inicio"><img src={assets.logo} alt="MariTech Comércio & Services" /></a>
           <p>{t.footerLine}</p>
-          <div className="footer-links"><a href="#servicos">{t.nav[1][0]}</a><a href="#contactos">{t.nav[3][0]}</a><a href="https://wa.me/244926706353" target="_blank" rel="noreferrer">WhatsApp <ArrowUpRight size={14} /></a></div>
+          <div className="footer-links"><a href="#servicos">{t.nav[1][0]}</a><a href="#contactos">{t.nav[3][0]}</a><a href="https://wa.me/244926706353" target="_blank" rel="noreferrer">WhatsApp</a></div>
         </div>
       </footer>
       <button className="floating-whatsapp" aria-label="WhatsApp" onClick={() => window.open("https://wa.me/244926706353", "_blank")}><MessageCircle size={22} /></button>
