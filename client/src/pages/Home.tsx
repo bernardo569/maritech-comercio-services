@@ -339,13 +339,13 @@ export default function Home() {
               <div className="contact-details">
                 <a href="tel:+244926706353"><Phone size={18} /> +244 926 706 353</a>
                 <a href="tel:+244942050290"><Phone size={18} /> +244 942 050 290</a>
-                <a href="mailto:comercial@maritechservices.com"><Mail size={18} /> comercial@maritechservices.com</a>
+                <a href="mailto:maritech@.com"><Mail size={18} /> maritech@.com</a>
                 <span><MapPin size={18} /> Bairro da Resistência, Cabinda</span>
               </div>
             </div>
             <div className="contact-form-card">
               <div className="form-card-top"><span>MT / CONTACT</span><MessageCircle size={22} /></div>
-              <form action="mailto:comercial@maritechservices.com" method="post" encType="text/plain">
+              <form action="mailto:maritech@.com" method="post" encType="text/plain">
                 <label>{t.formName}<input name="name" placeholder={t.formName} required /></label>
                 <label>{t.formEmail}<input name="email" type="email" placeholder={t.formEmail} required /></label>
                 <label>{t.formMessage}<textarea name="message" placeholder={t.formMessage} rows={4} required /></label>
