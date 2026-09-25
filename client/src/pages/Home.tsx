@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Activity,
   CheckCircle2,
   Clock3,
   Factory,
@@ -315,11 +314,6 @@ export default function Home() {
 
         <section className="about-section section-pad">
           <div className="container about-grid">
-            <div className="about-images">
-              <div className="about-image-main"><img src={assets.agriculture} alt={language === "pt" ? "Projeto de produção avícola" : "Poultry production project"} /></div>
-              <div className="about-image-small"><img src={assets.tank} alt={language === "pt" ? "Operação de limpeza industrial" : "Industrial cleaning operation"} /></div>
-              <span className="about-stamp"><Activity size={18} /> CABINDA<br /><strong>2026</strong></span>
-            </div>
             <div className="about-copy">
               <div className="eyebrow"><span className="eyebrow-line" />{t.aboutEyebrow}</div>
               <h2>{t.aboutTitle}</h2>
