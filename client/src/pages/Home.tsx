@@ -204,6 +204,7 @@ export default function Home() {
         <div className="topbar container">
           <a className="brand-mark" href="#inicio" aria-label="MariTech Comércio & Services">
             <img src={assets.logo} alt="MariTech Comércio & Services" />
+            <span className="brand-name"><strong>MariTech</strong><small>Comércio &amp; Services</small></span>
           </a>
           <div className="header-meta">
             <span><Clock3 size={14} /> 08:00 — 16:00</span>
