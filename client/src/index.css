@@ -46,7 +46,7 @@ button { border: 0; }
 .section-pad { padding: 110px 0; }
 .site-shell { overflow: hidden; }
 
-.site-header { position: absolute; z-index: 10; top: 0; width: 100%; color: white; }
+.site-header { position: fixed; z-index: 30; top: 0; width: 100%; color: white; background: rgba(4,85,47,.56); border-bottom: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(12px); }
 .topbar { height: 98px; display: flex; align-items: center; gap: 28px; }
 .brand-mark { display: inline-flex; align-items: center; gap: 10px; width: auto; flex: 0 0 auto; }
 .brand-mark img { display: block; width: 70px; height: 54px; object-fit: contain; filter: saturate(1.1) contrast(1.05); }
@@ -56,12 +56,14 @@ button { border: 0; }
 .header-meta { margin-left: auto; display: flex; gap: 22px; color: rgba(255,255,255,.75); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
 .header-meta span { display: flex; align-items: center; gap: 7px; }
 .main-nav { display: flex; align-items: center; gap: 26px; margin-left: 22px; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
-.main-nav a { opacity: .82; transition: opacity .18s, color .18s; }
+.main-nav a { position: relative; padding: 8px 0; opacity: .86; transition: opacity .18s, color .18s; }
+.main-nav a:after { content: ""; position: absolute; right: 0; bottom: 1px; left: 0; height: 2px; background: var(--maritech-yellow); transform: scaleX(0); transform-origin: center; transition: transform .18s; }
+.main-nav a:hover:after, .main-nav a:focus-visible:after { transform: scaleX(1); }
 .main-nav a:hover { opacity: 1; color: var(--maritech-yellow); }
 .language-switcher { display: flex; align-items: center; gap: 7px; margin-left: 3px; color: rgba(255,255,255,.5); }
 .language-switcher button { cursor: pointer; background: none; color: inherit; padding: 0; font-weight: 800; font-size: 12px; }
 .language-switcher button.active { color: var(--maritech-yellow); }
-.mobile-menu { display: none; margin-left: auto; color: white; background: transparent; cursor: pointer; }
+.mobile-menu { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: auto; color: white; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.3); border-radius: 4px; cursor: pointer; }
 
 .hero-section { position: relative; isolation: isolate; overflow: hidden; color: white; min-height: 760px; padding-top: 155px; background: linear-gradient(120deg, #04552f 0%, #078a42 57%, #0b9b62 100%); }
 .hero-section:before { content: ""; position: absolute; z-index: -1; inset: -4%; background-image: linear-gradient(90deg, rgba(4,85,47,.78) 0%, rgba(7,138,66,.54) 58%, rgba(11,155,98,.28) 100%), url("/manus-storage/offshore-platform_53f43a44.jpg"); background-size: cover; background-position: center; opacity: .82; animation: heroBackgroundDrift 9s ease-in-out infinite alternate; }
@@ -226,10 +228,11 @@ form input:focus, form textarea:focus { border-color: var(--maritech-cyan); box-
   .brand-mark img { width: 58px; height: 45px; }
   .brand-name strong { font-size: 13px; }
   .brand-name small { font-size: 7px; }
-  .mobile-menu { display: block; }
-  .main-nav { position: absolute; top: 77px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: 12px 20px 18px; background: var(--maritech-blue-deep); }
+  .mobile-menu { display: flex; }
+  .main-nav { position: absolute; top: 77px; left: 0; right: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: 12px 20px 18px; background: rgba(4,85,47,.98); border-top: 1px solid rgba(255,255,255,.16); box-shadow: 0 18px 30px rgba(0,0,0,.18); }
   .main-nav.is-open { display: flex; }
-  .main-nav a { padding: 12px 0; }
+  .main-nav a { padding: 15px 3px; font-size: 13px; }
+  .main-nav a:after { bottom: 7px; transform-origin: left; }
   .language-switcher { margin: 10px 0 0; padding-top: 12px; border-top: 1px solid rgba(255,255,255,.2); }
   .hero-section { min-height: 880px; padding-top: 125px; }
   .hero-grid, .split-heading, .services-layout, .trust-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }

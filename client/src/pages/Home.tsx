@@ -224,10 +224,10 @@ export default function Home() {
             <span><Clock3 size={14} /> 08:00 — 16:00</span>
             <span><MapPin size={14} /> Cabinda · Angola</span>
           </div>
-          <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}>
+          <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="main-navigation">
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
-          <nav className={`main-nav ${menuOpen ? "is-open" : ""}`}>
+          <nav id="main-navigation" className={`main-nav ${menuOpen ? "is-open" : ""}`} aria-label={language === "pt" ? "Navegação principal" : "Main navigation"}>
             {t.nav.map(([label, id]) => (
               <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>{label}</a>
             ))}
