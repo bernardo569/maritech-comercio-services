@@ -6,6 +6,8 @@ import {
   Factory,
   Gauge,
   HardHat,
+  Facebook,
+  Instagram,
   Leaf,
   Mail,
   MapPin,
@@ -24,10 +26,10 @@ type Language = "pt" | "en";
 
 const assets = {
   logo: "/manus-storage/maritech-mt-mark_7693e8fb.png",
-  platform: "/manus-storage/platform-worker_46611f4b.jpg",
-  tank: "/manus-storage/industrial-platform-worker_9fd15c3d.jpg",
-  radiation: "/manus-storage/radiation-team_ecbb81fb.webp",
-  agriculture: "/manus-storage/agriculture_3e02657f.jpg",
+  platform: "/manus-storage/industrial-cleaning-team_f83382f3.jpg",
+  tank: "/manus-storage/tank-team_51eb3582.jpg",
+  radiation: "/manus-storage/rpo-supervisor_fae7637c.jpg",
+  agriculture: "/manus-storage/boat-cleaning_c5736780.jpg",
 };
 
 const content = {
@@ -341,6 +343,11 @@ export default function Home() {
         <div className="container footer-grid">
           <p>{t.footerLine}</p>
           <div className="footer-links"><a href="#servicos">{t.nav[1][0]}</a><a href="#contactos">{t.nav[3][0]}</a><a href="https://wa.me/244926706353" target="_blank" rel="noreferrer">WhatsApp</a></div>
+          <div className="footer-social" aria-label="Redes sociais">
+            <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><Instagram size={17} /></a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><Facebook size={17} /></a>
+            <span>© 2026 MariTech</span>
+          </div>
         </div>
       </footer>
       <button className="floating-whatsapp" aria-label="WhatsApp" onClick={() => window.open("https://wa.me/244926706353", "_blank")}><MessageCircle size={22} /></button>
