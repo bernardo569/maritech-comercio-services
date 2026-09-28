@@ -281,10 +281,7 @@ export default function Home() {
         </section>
 
         <section className="image-strip-section" aria-label={language === "pt" ? "Galeria de operações" : "Operations gallery"}>
-          <div className="image-strip container">
-            <figure><img src={assets.chiliField} alt={language === "pt" ? "Produção agrícola de pimenta" : "Agricultural chili production"} /><figcaption>{language === "pt" ? "Agricultura" : "Agriculture"}</figcaption></figure>
-            <figure><img src={assets.safetyInspection} alt={language === "pt" ? "Inspeção de segurança no trabalho" : "Workplace safety inspection"} /><figcaption>{language === "pt" ? "ManPower" : "Manpower"}</figcaption></figure>
-            <figure><img src={assets.confinedSpace} alt={language === "pt" ? "Controlo de entrada em espaço confinado" : "Confined-space entry control"} /><figcaption>{language === "pt" ? "HSE & RPO" : "HSE & RPO"}</figcaption></figure>
+          <div className="image-strip single-image-gallery container">
             <figure><img src={assets.industrialEntry} alt={language === "pt" ? "Trabalho técnico em equipamento industrial" : "Technical industrial equipment work"} /><figcaption>{language === "pt" ? "Operações técnicas" : "Technical operations"}</figcaption></figure>
           </div>
         </section>
