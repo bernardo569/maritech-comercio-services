@@ -26,9 +26,13 @@ type Language = "pt" | "en";
 const assets = {
   logo: "/manus-storage/maritech-mt-mark_7693e8fb.png",
   platform: "/manus-storage/industrial-cleaning-team_f83382f3.jpg",
-  tank: "/manus-storage/tank-team_51eb3582.jpg",
-  radiation: "/manus-storage/rpo-supervisor_fae7637c.jpg",
-  agriculture: "/manus-storage/boat-cleaning_c5736780.jpg",
+  chiliField: "/manus-storage/chili-field_5c19c9d4.jpg",
+  safetyInspection: "/manus-storage/safety-inspection_a1975067.jpg",
+  chiliHarvest: "/manus-storage/chili-harvest_8d14e793.jpg",
+  industrialEntry: "/manus-storage/industrial-entry_4c1ba9a0.jpg",
+  confinedSpace: "/manus-storage/confined-space_f447c108.jpg",
+  radiationLogo: "/manus-storage/radiation-logo_0466902b.jpg",
+  industrialWorker: "/manus-storage/industrial-worker_e91de2ae.jpg",
 };
 
 const content = {
@@ -59,6 +63,8 @@ const content = {
         title: "Recrutamento & seleção",
         text: "Fornecimento de mão de obra qualificada e equipas ManPower para operações industriais e de serviços.",
         points: ["Triagem de perfis", "Equipas por projeto", "Resposta operacional"],
+        image: assets.safetyInspection,
+        imageAlt: "Profissional a preencher uma ficha de inspeção de segurança",
       },
       {
         icon: Leaf,
@@ -66,6 +72,8 @@ const content = {
         title: "Exportação de pimenta chili",
         text: "Produção, preparação e exportação de pimenta chili para mercados no exterior.",
         points: ["Seleção do produto", "Preparação para exportação", "Mercados internacionais"],
+        image: assets.chiliHarvest,
+        imageAlt: "Campo de pimenta chili em produção",
       },
       {
         icon: Radiation,
@@ -73,6 +81,8 @@ const content = {
         title: "Radioproteção",
         text: "Profissionais e equipamentos para o manejo responsável de materiais radioativos de ocorrência natural.",
         points: ["Peritos e HSE Supervisor RPO", "Oficiais e técnicos de proteção", "Medidores, dosimeter e detectores"],
+        image: assets.confinedSpace,
+        imageAlt: "Equipa a controlar a entrada num espaço confinado com detector",
       },
       {
         icon: Factory,
@@ -80,6 +90,8 @@ const content = {
         title: "Limpeza industrial",
         text: "Limpeza técnica de tanques, filtros, depósitos, COT, drenos e áreas de operação em terra ou no mar.",
         points: ["Tanques e filtros exchanger", "Depósitos de combustível em barcos", "COT, drenos e desentupimento"],
+        image: assets.industrialEntry,
+        imageAlt: "Técnicos a trabalhar numa abertura de equipamento industrial",
       },
       {
         icon: Sprout,
@@ -87,6 +99,8 @@ const content = {
         title: "Agricultura & produção",
         text: "Apoio a projetos de agricultura, aviário, pecuária, apicultura e avicultura com visão local.",
         points: ["Produção sustentável", "Apoio a operações", "Desenvolvimento regional"],
+        image: assets.chiliField,
+        imageAlt: "Trabalhador numa área agrícola de produção",
       },
     ],
     trustEyebrow: "PORQUE TRABALHAR CONNOSCO",
@@ -143,6 +157,8 @@ const content = {
         title: "Recruitment & selection",
         text: "Qualified manpower and ManPower teams for industrial and service operations.",
         points: ["Profile screening", "Project-based teams", "Operational response"],
+        image: assets.safetyInspection,
+        imageAlt: "Professional completing a safety inspection record",
       },
       {
         icon: Leaf,
@@ -150,6 +166,8 @@ const content = {
         title: "Chili pepper export",
         text: "Production, preparation and export of chili peppers to international markets.",
         points: ["Product selection", "Export preparation", "International markets"],
+        image: assets.chiliHarvest,
+        imageAlt: "Chili pepper field in production",
       },
       {
         icon: Radiation,
@@ -157,6 +175,8 @@ const content = {
         title: "Radiation protection",
         text: "People and equipment for the responsible handling of naturally occurring radioactive materials.",
         points: ["Experts and HSE Supervisor RPO", "Protection officers and technicians", "Meters, dosimeter and gas detection"],
+        image: assets.confinedSpace,
+        imageAlt: "Team controlling entry to a confined space with a detector",
       },
       {
         icon: Factory,
@@ -164,6 +184,8 @@ const content = {
         title: "Industrial cleaning",
         text: "Technical cleaning of tanks, filters, deposits, COT, drains and operational areas onshore or offshore.",
         points: ["Tanks and exchanger filters", "Vessel fuel deposits", "COT, drains and unclogging"],
+        image: assets.industrialEntry,
+        imageAlt: "Technicians working on an industrial equipment opening",
       },
       {
         icon: Sprout,
@@ -171,6 +193,8 @@ const content = {
         title: "Agriculture & production",
         text: "Support for agriculture, poultry, livestock, beekeeping and aviculture projects with a local perspective.",
         points: ["Sustainable production", "Operational support", "Regional development"],
+        image: assets.chiliField,
+        imageAlt: "Worker in a local agricultural production area",
       },
     ],
     trustEyebrow: "WHY WORK WITH US",
@@ -258,10 +282,10 @@ export default function Home() {
 
         <section className="image-strip-section" aria-label={language === "pt" ? "Galeria de operações" : "Operations gallery"}>
           <div className="image-strip container">
-            <figure><img src={assets.agriculture} alt={language === "pt" ? "Limpeza de embarcação" : "Vessel cleaning"} /><figcaption>{language === "pt" ? "Embarcações" : "Vessels"}</figcaption></figure>
-            <figure><img src={assets.tank} alt={language === "pt" ? "Limpeza de tanque industrial" : "Industrial tank cleaning"} /><figcaption>{language === "pt" ? "Tanques" : "Tanks"}</figcaption></figure>
-            <figure><img src={assets.radiation} alt={language === "pt" ? "Supervisor de radioproteção" : "Radiation protection supervisor"} /><figcaption>{language === "pt" ? "Radioproteção" : "Radiation protection"}</figcaption></figure>
-            <figure><img src={assets.platform} alt={language === "pt" ? "Equipa de limpeza industrial" : "Industrial cleaning team"} /><figcaption>{language === "pt" ? "Limpeza industrial" : "Industrial cleaning"}</figcaption></figure>
+            <figure><img src={assets.chiliField} alt={language === "pt" ? "Produção agrícola de pimenta" : "Agricultural chili production"} /><figcaption>{language === "pt" ? "Agricultura" : "Agriculture"}</figcaption></figure>
+            <figure><img src={assets.safetyInspection} alt={language === "pt" ? "Inspeção de segurança no trabalho" : "Workplace safety inspection"} /><figcaption>{language === "pt" ? "ManPower" : "Manpower"}</figcaption></figure>
+            <figure><img src={assets.confinedSpace} alt={language === "pt" ? "Controlo de entrada em espaço confinado" : "Confined-space entry control"} /><figcaption>{language === "pt" ? "HSE & RPO" : "HSE & RPO"}</figcaption></figure>
+            <figure><img src={assets.industrialEntry} alt={language === "pt" ? "Trabalho técnico em equipamento industrial" : "Technical industrial equipment work"} /><figcaption>{language === "pt" ? "Operações técnicas" : "Technical operations"}</figcaption></figure>
           </div>
         </section>
 
@@ -279,6 +303,7 @@ export default function Home() {
                 const Icon = service.icon;
                 return (
                   <article className="service-card" key={service.number}>
+                    <div className="service-card-image"><img src={service.image} alt={service.imageAlt} /></div>
                     <div className="service-card-top"><span className="service-number">{service.number}</span><div className="service-icon"><Icon size={22} strokeWidth={1.7} /></div></div>
                     <div className="service-body">
                       <h3>{service.title}</h3>
@@ -319,6 +344,7 @@ export default function Home() {
               <h2>{t.aboutTitle}</h2>
               <p>{t.aboutText}</p>
               <blockquote>{t.aboutQuote}</blockquote>
+              <div className="radiation-brand"><img src={assets.radiationLogo} alt="MariTech Radiation Protection — Safety, Precision, Protection" /><span>{language === "pt" ? "Radioproteção com segurança, precisão e proteção." : "Radiation protection with safety, precision and protection."}</span></div>
               <div className="equipment-block"><span className="mini-label"><Gauge size={15} />{t.equipmentLabel}</span><div className="equipment-list">{t.equipment.map(item => <span key={item}><Wrench size={14} />{item}</span>)}</div></div>
             </div>
           </div>
