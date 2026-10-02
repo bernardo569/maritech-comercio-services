@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   CheckCircle2,
   Clock3,
@@ -20,19 +20,28 @@ import {
   Wrench,
   X,
 } from "lucide-react";
+import chiliField from "@/assets/chili-field.jpg";
+import chiliHarvest from "@/assets/chili-harvest.jpg";
+import confinedSpace from "@/assets/confined-space.jpg";
+import industrialEntry from "@/assets/industrial-entry.jpg";
+import industrialWorker from "@/assets/industrial-worker.jpg";
+import maritechLogo from "@/assets/maritech-mt-mark.png";
+import offshorePlatform from "@/assets/offshore-platform.jpg";
+import radiationLogo from "@/assets/radiation-logo.jpg";
+import safetyInspection from "@/assets/safety-inspection.jpg";
 
 type Language = "pt" | "en";
 
 const assets = {
-  logo: "/manus-storage/maritech-mt-mark_7693e8fb.png",
-  platform: "/manus-storage/industrial-cleaning-team_f83382f3.jpg",
-  chiliField: "/manus-storage/chili-field_5c19c9d4.jpg",
-  safetyInspection: "/manus-storage/safety-inspection_a1975067.jpg",
-  chiliHarvest: "/manus-storage/chili-harvest_8d14e793.jpg",
-  industrialEntry: "/manus-storage/industrial-entry_4c1ba9a0.jpg",
-  confinedSpace: "/manus-storage/confined-space_f447c108.jpg",
-  radiationLogo: "/manus-storage/radiation-logo_0466902b.jpg",
-  industrialWorker: "/manus-storage/industrial-worker_e91de2ae.jpg",
+  logo: maritechLogo,
+  platform: offshorePlatform,
+  chiliField,
+  safetyInspection,
+  chiliHarvest,
+  industrialEntry,
+  confinedSpace,
+  radiationLogo,
+  industrialWorker,
 };
 
 const content = {
@@ -264,7 +273,7 @@ export default function Home() {
       </header>
 
       <main>
-        <section id="inicio" className="hero-section">
+        <section id="inicio" className="hero-section" style={{ "--hero-bg": `url(${assets.platform})` } as CSSProperties}>
           <div className="hero-grid container">
             <div className="hero-copy">
               <div className="eyebrow"><span className="eyebrow-line" />{t.eyebrow}</div>
